@@ -1,0 +1,154 @@
+.art-link.art-color-link {
+    color: #75aa03;
+}
+
+.art-link.art-color-link:hover {
+    color: #75aa03;
+}
+
+.art-btn {
+    background: #75aa03;
+}
+
+blockquote {
+    background: #75aa03;
+}
+
+.art-custom-list li:before {
+    border: solid 2px #75aa03;
+}
+
+.art-info-bar .art-header .art-avatar .art-lamp-light .art-available-lamp {
+    background: #75aa03;
+}
+
+.art-info-bar .art-name:hover a {
+    color: #75aa03
+}
+
+.art-info-bar .art-knowledge-list li:before {
+    color: #75aa03;
+}
+
+.art-menu-bar .art-language-change li.art-active-lang {
+    background-color: #75aa03;
+}
+
+.art-code i {
+    color: #75aa03
+}
+
+.art-counter-frame .art-counter-box .art-counter {
+    color: #75aa03;
+}
+
+.art-counter-frame .art-counter-box .art-counter-plus {
+    color: #75aa03;
+}
+
+.art-price.art-popular-price:before {
+    background: #75aa03
+}
+
+.art-price .art-price-body .art-price-cost .art-number {
+    color: #75aa03;
+}
+
+.art-price .art-price-body .art-price-list li:before {
+    color: #75aa03
+}
+
+.art-price .art-price-body .art-price-list li.art-empty-item:before {
+    color: #75aa03
+}
+
+.art-testimonial .art-testimonial-footer .art-star-rate {
+    color: #75aa03
+}
+
+.art-slider-navigation .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #75aa03;
+}
+
+.fancybox-progress {
+    background: #75aa03;
+}
+
+.fancybox-thumbs__list a:before {
+    border-color: #75aa03;
+}
+
+.art-timeline .art-timeline-item .art-timeline-mark {
+    border: solid 3px #75aa03;
+}
+
+.art-form-field textarea.art-active {
+    border-color: #75aa03
+}
+
+.art-form-field textarea:focus {
+    border-color: #75aa03
+}
+
+.art-contact-form .art-input.art-active+label,
+.art-contact-form .art-input:focus+label {
+    background: #75aa03;
+}
+
+.art-pagination .art-pagination-center a.art-active-pag {
+    color: #75aa03
+}
+
+.art-preloader-load path:last-child {
+    stroke: #75aa03;
+}
+
+.art-line-progress path:last-child {
+    stroke: #75aa03;
+}
+
+.art-cirkle-progress path:last-child {
+    stroke: #75aa03;
+}
+
+.sidebar-menu {
+    width: 200px; /* Ancho del menú */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    border-radius: 8px; /* Bordes suaves */
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar-menu li:hover {
+    background: #373744; /* Cambio de color al pasar el cursor */
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    color: #4a4a4a; /* Color del texto */
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Espacio entre icono y texto */
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.sidebar-menu i {
+    font-size: 17px;
+    color: #606770; /* Color del icono */
+}
