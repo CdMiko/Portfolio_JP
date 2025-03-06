@@ -8,6 +8,7 @@ Portfolio:  https://themeforest.net/user/millerdigitaldesign/portfolio?ref=Mille
 p.s. I am available for Freelance hire (UI design, web development). mail: miller.themes@gmail.com
 
 ------------------------------------------- */
+
 $(function () {
   "use strict";
 
@@ -163,43 +164,47 @@ $(function () {
 
 
   }
-  
-  
 
-  
- 
+  // Función para asignar el envío de EmailJS al formulario
+  function attachEmailHandler() {
+    // Inicializa EmailJS (se puede hacer una sola vez globalmente)
+    emailjs.init("tIw31q_NqsfDtYiym");
 
-  // Contact form
-  $(".art-input").keyup(function () {
-    if ($(this).val()) {
-      $(this).addClass("art-active");
-    } else {
-      $(this).removeClass("art-active");
+    const formEl = document.getElementById("form");
+    if (formEl) {
+      // Remueve listeners previos (opcional para evitar duplicados)
+      formEl.removeEventListener("submit", emailFormSubmit);
+      formEl.addEventListener("submit", emailFormSubmit);
     }
-  });
+  }
 
-  $("#form").submit(function () {
-    $.ajax({
-      type: "POST",
-      url: "mail.php",
-      data: $(this).serialize(),
-    }).done(function () {
-      var tl = anime.timeline({
-        easing: "easeOutExpo",
-      });
+  // Función que se ejecuta al enviar el formulario
+  function emailFormSubmit(event) {
+    event.preventDefault(); // Evita que la página se recargue
 
-      tl.add({
-        targets: ".art-submit",
-        opacity: 0,
-        scale: 0.5,
-      }).add({
-        targets: ".art-success",
-        scale: 1,
-        height: "45px",
-      });
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    emailjs.send("service_1rmi315", "template_x52kez3", {
+      name: name,
+      email: email,
+      message: message
+    })
+    .then(function () {
+      alert("¡Mensaje enviado con éxito!");
+      document.getElementById("form").reset();
+    })
+    .catch(function (error) {
+      alert("Hubo un error al enviar el mensaje. Intenta nuevamente.");
+      console.error("Error al enviar:", error);
     });
-    return false;
-  });
+  }
+
+  // Asigna el manejador del formulario en la carga inicial
+  if (document.getElementById("form")) {
+    attachEmailHandler();
+  }
 
   // portfolio filter
   $(".art-filter a").on("click", function () {
@@ -375,28 +380,8 @@ $(function () {
       continuousScrolling: true,
     });
 
-    $("#form").submit(function () {
-      $.ajax({
-        type: "POST",
-        url: "mail.php",
-        data: $(this).serialize(),
-      }).done(function () {
-        var tl = anime.timeline({
-          easing: "easeOutExpo",
-        });
+    attachEmailHandler();
 
-        tl.add({
-          targets: ".art-submit",
-          opacity: 0,
-          scale: 0.5,
-        }).add({
-          targets: ".art-success",
-          scale: 1,
-          height: "45px",
-        });
-      });
-      return false;
-    });
 
     // Masonry Grid
     $(".art-grid").isotope({
