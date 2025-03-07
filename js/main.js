@@ -1,14 +1,3 @@
-/* -------------------------------------------
-
-Name: 		Arter
-Version:  1.0
-Author:		Nazar Miller (millerDigitalDesign)
-Portfolio:  https://themeforest.net/user/millerdigitaldesign/portfolio?ref=MillerDigitalDesign
-
-p.s. I am available for Freelance hire (UI design, web development). mail: miller.themes@gmail.com
-
-------------------------------------------- */
-
 $(function () {
   "use strict";
 
@@ -71,6 +60,88 @@ $(function () {
   });
 
   bar.animate(1);
+
+  if (document.getElementById("lineprog1")) {
+    var bar = new ProgressBar.Line(lineprog1, {
+      strokeWidth: 1.72,
+      trailWidth: 1.72,
+      easing: "easeInOut",
+      duration: 1400,
+      svgStyle: {
+        width: "100%",
+        height: "100%",
+      },
+      step: (state, bar) => {
+        bar.setText(Math.round(bar.value() * 100) + " %");
+      },
+    });
+  
+    bar.animate(0.9);
+
+    var bar = new ProgressBar.Line(lineprog2, {
+      strokeWidth: 1.72,
+      easing: "easeInOut",
+      duration: 1400,
+      delay: 2900,
+      trailWidth: 1.72,
+      svgStyle: {
+        width: "100%",
+        height: "100%",
+      },
+      step: (state, bar) => {
+        bar.setText(Math.round(bar.value() * 100) + " %");
+      },
+    });
+  
+    bar.animate(0.95);
+  
+    var bar = new ProgressBar.Line(lineprog3, {
+      strokeWidth: 1.72,
+      easing: "easeInOut",
+      duration: 1400,
+      delay: 3000,
+      trailWidth: 1.72,
+      svgStyle: {
+        width: "100%",
+        height: "100%",
+      },
+      step: (state, bar) => {
+        bar.setText(Math.round(bar.value() * 100) + " %");
+      },
+    });
+  
+    bar.animate(0.75);
+  
+  var lineBar4 = new ProgressBar.Line("#lineprog4", {
+    strokeWidth: 1.72,
+    easing: "easeInOut",
+    duration: 1400,
+    delay: 3100,
+    trailWidth: 1.72,
+    svgStyle: { width: "100%", height: "100%" },
+    step: (state, bar) => {
+      bar.setText(Math.round(bar.value() * 100) + " %");
+    },
+  });
+  lineBar4.animate(0.65);
+  
+  var bar = new ProgressBar.Line(lineprog5, {
+    strokeWidth: 1.72,
+    easing: "easeInOut",
+    duration: 1400,
+    delay: 3200,
+    trailWidth: 1.72,
+    svgStyle: {
+      width: "100%",
+      height: "100%",
+    },
+    step: (state, bar) => {
+      bar.setText(Math.round(bar.value() * 100) + " %");
+    },
+  });
+
+  bar.animate(0.85);
+}
 
   // counters
   anime({
@@ -161,7 +232,6 @@ $(function () {
     });
   
     bar.animate(0.4);
-
 
   }
 
