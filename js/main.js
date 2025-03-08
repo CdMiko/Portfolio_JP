@@ -419,6 +419,19 @@ $(function () {
     $(this).addClass("art-active");
   });
 
+  $(".art-info-bar-btn").on("click", function () {
+    $(".art-info-bar").toggleClass("art-active");
+    $(".art-menu-bar-btn").toggleClass("art-disabled");
+  });
+
+  $(".art-menu-bar-btn").on("click", function () {
+    $(".art-menu-bar-btn , .art-menu-bar").toggleClass("art-active");
+    $(".art-info-bar-btn").toggleClass("art-disabled");
+  });
+
+  $(".art-info-bar-btn , .art-menu-bar-btn").on("click", function () {
+    $(".art-content").toggleClass("art-active");
+  });
   
   $(".art-curtain , .art-mobile-top-bar").on("click", function () {
     $(
