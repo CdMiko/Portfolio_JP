@@ -567,6 +567,26 @@ space
     margin-bottom: 15px;
 }
 
+.mb60{
+    display: flex  !important;     /* Convierte el contenedor en flex */
+    gap: 50px;           /* Espacio entre las imágenes */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.mb70{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-top: 10px;
+}
+
+.mb60 img {
+    max-width: 20%; /* Ajusta este valor según lo que necesites */
+    height: auto;
+  }
+
 .mb-305{
     margin-bottom: 10px;
 }
