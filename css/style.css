@@ -71,25 +71,31 @@ h6 {
 }
 
 .description3{
-    margin-right: 30px;
+    flex: 1.5;
 }
 
 .art-service-ib-content2{
+    align-items: flex-start;
+    gap: 20px;
     margin: 20px;
     border-radius: 10px;
     display: flex;
+    
 }
 
 
-.image-container{
-    display: flex;
-    gap: 10px;
+.image-container{           /* ocupa el resto del ancho */
+  display: flex;          /* pone las fotos en fila */
+  gap: 20px;              /* espacio entre imágenes */
+  justify-content: center;/* centra o ajusta según tu gusto */
+  align-items: center;
+  flex: 1;
 }
 
 .projectimg{
     object-fit:contain;
-    width: 200px;
-    height:auto;
+    width: auto;
+    height:160px;
 }
 
 
@@ -2821,6 +2827,7 @@ portfolio
 
 .art-cont1{
     width: 100%;
+    margin: 15px;
 }
 
 .art-item1{
