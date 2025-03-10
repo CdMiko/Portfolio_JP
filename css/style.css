@@ -60,13 +60,10 @@ h6 {
     color: #fafafc;
 }
 
-/* ----- cosas nuevas ----- */
-
-
 .project-header10{
-    display: flex;                /* Pone título y fecha en la misma línea */
-    justify-content: space-between; /* El título queda a la izquierda y la fecha a la derecha */
-    align-items: center;          /* Centra verticalmente ambos elementos */
+    display: flex;                
+    justify-content: space-between; 
+    align-items: center;        
     margin-bottom: 5px;
 }
 
@@ -80,14 +77,12 @@ h6 {
     margin: 20px;
     border-radius: 10px;
     display: flex;
-    
 }
 
-
-.image-container{           /* ocupa el resto del ancho */
-  display: flex;          /* pone las fotos en fila */
-  gap: 20px;              /* espacio entre imágenes */
-  justify-content: center;/* centra o ajusta según tu gusto */
+.image-container{          
+  display: flex;        
+  gap: 20px;              
+  justify-content: center;
   align-items: center;
   flex: 1;
 }
@@ -97,7 +92,6 @@ h6 {
     width: auto;
     height:160px;
 }
-
 
 .art-date10{
     margin-top: -15px;
@@ -208,8 +202,6 @@ a:focus {
 .art-table ul {
     padding: 0;
     margin: 0;
-    
-    
 }
 
 
@@ -761,7 +753,6 @@ app marcup
     height: 100%;
     position: relative;
     overflow: hidden;
-    /* ----- mobile top bar ----- */
 }
 
 .art-app * {
@@ -1415,11 +1406,9 @@ info bar
 .art-line-progress{
 position: relative;
   width: 100%;
-  height: 8px;               /* Ajusta el alto que desees */
-  background-color: #2B2B35; /* Si quieres un fondo, pero
-                                ojo que ProgressBar.js 
-                                ya usa trailColor */
-  margin-bottom: 15px;       /* Separación entre barras */
+  height: 8px;               
+  background-color: #2B2B35; 
+  margin-bottom: 15px;    
 }
 
 .art-info-bar .art-knowledge-list li {
@@ -1480,7 +1469,7 @@ position: relative;
 .fist-line-table a {
     display: flex;
     align-items: center;
-    gap: 20px; /* Espacio entre el icono y el texto */
+    gap: 20px; 
     text-decoration: none;
     color: inherit;
 }
@@ -1497,7 +1486,7 @@ position: relative;
 }
 
 .art-ls-social a i {
-    font-size: 17px; /* Tamaño más grande */
+    font-size: 17px; 
 }
 
 /* ----- progresbar color ----- */
@@ -1529,12 +1518,6 @@ menu bar
 
 .art-menu-bar, .art-menu-bar-btn {
   display: none;
-}
-
-.art-menu-bar {
-    /* ----- main menu  ----- */
-    /* ----- language change  ----- */
-    /* ----- current page title ----- */
 }
 
 .art-menu-bar nav {
@@ -2820,10 +2803,7 @@ portfolio
     -webkit-transition: 0.55s ease-in-out;
     transition: 0.55s ease-in-out;
     width: 100%;
-    /* clear fix */
 }
-
-
 
 .art-cont1{
     width: 100%;
@@ -3415,4 +3395,3 @@ html.is-animating .fade-left {
     }
 }
 
-/*# sourceMappingURL=style.css.map */
