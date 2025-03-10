@@ -3233,6 +3233,11 @@ content (after 920px)
     .col-md-6{
         margin-top: 20px;
     }
+    .mb60 img {
+        max-width: 13%; 
+        height: auto;
+      }
+
 }
 
 /* ------------------------------
