@@ -190,7 +190,7 @@ $(function () {
         if (value === 0) {
           circle.setText("");
         } else {
-          circle.setText(value+"%");
+          circle.setText('Nativo');
         }
       },
     });
@@ -208,12 +208,12 @@ $(function () {
         if (value === 0) {
           circle.setText("");
         } else {
-          circle.setText(value+"%");
+          circle.setText('B2');
         }
       },
     });
   
-    bar.animate(0.8);
+    bar.animate(0.7);
   
     var bar = new ProgressBar.Circle(circleprog3, {
       strokeWidth: 7,
@@ -226,12 +226,12 @@ $(function () {
         if (value === 0) {
           circle.setText("");
         } else {
-          circle.setText(value+"%");
+          circle.setText('A2');
         }
       },
     });
   
-    bar.animate(0.4);
+    bar.animate(0.3);
 
   }
 
