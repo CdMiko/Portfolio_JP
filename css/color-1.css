@@ -135,11 +135,11 @@ blockquote {
 
 .sidebar-menu a {
     text-decoration: none;
-    color: #4a4a4a; /* Color del texto */
+    color: #646466;
     font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 25px; /* Espacio entre icono y texto */
+    gap: 25px; 
     width: 100%;
     padding: 10px;
     border-radius: 8px;
@@ -148,5 +148,5 @@ blockquote {
 
 .sidebar-menu i {
     font-size: 17px;
-    color: #606770; /* Color del icono */
+    color: #606770; 
 }
