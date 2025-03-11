@@ -114,7 +114,6 @@ blockquote {
 .sidebar-menu {
     width: 200px; /* Ancho del menú */
     border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     margin-top: 60px;
 }
 
