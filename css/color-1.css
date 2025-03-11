@@ -113,7 +113,6 @@ blockquote {
 
 .sidebar-menu {
     width: 200px; /* Ancho del menú */
-    border-radius: 10px; /* Bordes redondeados */
     margin-top: 60px;
 }
 
