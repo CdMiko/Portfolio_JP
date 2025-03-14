@@ -179,7 +179,11 @@ $(function () {
   // progressbars
   function initProgressCircles() {
     var elem1 = document.getElementById("circleprog1");
+    var elem2 = document.getElementById("circleprog2");
+    var elem3 = document.getElementById("circleprog3");
+  
     if (elem1) {
+      elem1.innerHTML = ""; // Limpia el contenedor
       var bar1 = new ProgressBar.Circle(elem1, {
         strokeWidth: 7,
         easing: "easeInOut",
@@ -193,9 +197,9 @@ $(function () {
       });
       bar1.animate(1);
     }
-    
-    var elem2 = document.getElementById("circleprog2");
+  
     if (elem2) {
+      elem2.innerHTML = "";
       var bar2 = new ProgressBar.Circle(elem2, {
         strokeWidth: 7,
         easing: "easeInOut",
@@ -209,9 +213,9 @@ $(function () {
       });
       bar2.animate(0.7);
     }
-    
-    var elem3 = document.getElementById("circleprog3");
+  
     if (elem3) {
+      elem3.innerHTML = "";
       var bar3 = new ProgressBar.Circle(elem3, {
         strokeWidth: 7,
         easing: "easeInOut",
@@ -227,7 +231,7 @@ $(function () {
     }
   }
 
-  setTimeout(initProgressCircles, 100);
+  initProgressCircles()
   
 
   // Función para asignar el envío de EmailJS al formulario
@@ -460,7 +464,7 @@ $(function () {
 
     attachEmailHandler();
 
-    initProgressCircles();
+    setTimeout(initProgressCircles, 500);
 
 
     // Masonry Grid
