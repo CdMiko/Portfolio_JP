@@ -227,7 +227,7 @@ $(function () {
     }
   }
 
-  initProgressCircles();
+  setTimeout(initProgressCircles, 100);
   
 
   // Función para asignar el envío de EmailJS al formulario
