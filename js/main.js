@@ -178,45 +178,48 @@ $(function () {
 
   // progressbars
   function initProgressCircles() {
-    if (document.getElementById("circleprog1")) {
-      var bar1 = new ProgressBar.Circle(circleprog1, {
-        strokeWidth: 7,
-        easing: "easeInOut",
-        duration: 1400,
-        delay: 2500,
-        trailWidth: 7,
-        step: function (state, circle) {
-          var value = Math.round(circle.value() * 100);
-          circle.setText(value === 0 ? "" : 'Nativo');
-        },
-      });
-      bar1.animate(1);
+  var elem1 = document.getElementById("circleprog1");
+  var elem2 = document.getElementById("circleprog2");
+  var elem3 = document.getElementById("circleprog3");
+  if (elem1 && elem2 && elem3) {
+    var bar1 = new ProgressBar.Circle(elem1, {
+      strokeWidth: 7,
+      easing: "easeInOut",
+      duration: 1400,
+      delay: 2500,
+      trailWidth: 7,
+      step: function (state, circle) {
+        var value = Math.round(circle.value() * 100);
+        circle.setText(value === 0 ? "" : 'Nativo');
+      },
+    });
+    bar1.animate(1);
   
-      var bar2 = new ProgressBar.Circle(circleprog2, {
-        strokeWidth: 7,
-        easing: "easeInOut",
-        duration: 1400,
-        delay: 2600,
-        trailWidth: 7,
-        step: function (state, circle) {
-          var value = Math.round(circle.value() * 100);
-          circle.setText(value === 0 ? "" : 'B2');
-        },
-      });
-      bar2.animate(0.7);
+    var bar2 = new ProgressBar.Circle(elem2, {
+      strokeWidth: 7,
+      easing: "easeInOut",
+      duration: 1400,
+      delay: 2600,
+      trailWidth: 7,
+      step: function (state, circle) {
+        var value = Math.round(circle.value() * 100);
+        circle.setText(value === 0 ? "" : 'B2');
+      },
+    });
+    bar2.animate(0.7);
   
-      var bar3 = new ProgressBar.Circle(circleprog3, {
-        strokeWidth: 7,
-        easing: "easeInOut",
-        duration: 1400,
-        delay: 2700,
-        trailWidth: 7,
-        step: function (state, circle) {
-          var value = Math.round(circle.value() * 100);
-          circle.setText(value === 0 ? "" : 'A2');
-        },
-      });
-      bar3.animate(0.3);
+    var bar3 = new ProgressBar.Circle(elem3, {
+      strokeWidth: 7,
+      easing: "easeInOut",
+      duration: 1400,
+      delay: 2700,
+      trailWidth: 7,
+      step: function (state, circle) {
+        var value = Math.round(circle.value() * 100);
+        circle.setText(value === 0 ? "" : 'A2');
+      },
+    });
+    bar3.animate(0.3);
     }
   }
 
