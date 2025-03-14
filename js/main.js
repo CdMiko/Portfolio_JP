@@ -177,63 +177,51 @@ $(function () {
   });
 
   // progressbars
-
-  if (document.getElementById("circleprog1")) {
-    var bar = new ProgressBar.Circle(circleprog1, {
-      strokeWidth: 7,
-      easing: "easeInOut",
-      duration: 1400,
-      delay: 2500,
-      trailWidth: 7,
-      step: function (state, circle) {
-        var value = Math.round(circle.value() * 100);
-        if (value === 0) {
-          circle.setText("");
-        } else {
-          circle.setText('Nativo');
-        }
-      },
-    });
+  function initProgressCircles() {
+    if (document.getElementById("circleprog1")) {
+      var bar1 = new ProgressBar.Circle(circleprog1, {
+        strokeWidth: 7,
+        easing: "easeInOut",
+        duration: 1400,
+        delay: 2500,
+        trailWidth: 7,
+        step: function (state, circle) {
+          var value = Math.round(circle.value() * 100);
+          circle.setText(value === 0 ? "" : 'Nativo');
+        },
+      });
+      bar1.animate(1);
   
-    bar.animate(1);
-
-    var bar = new ProgressBar.Circle(circleprog2, {
-      strokeWidth: 7,
-      easing: "easeInOut",
-      duration: 1400,
-      delay: 2600,
-      trailWidth: 7,
-      step: function (state, circle) {
-        var value = Math.round(circle.value() * 100);
-        if (value === 0) {
-          circle.setText("");
-        } else {
-          circle.setText('B2');
-        }
-      },
-    });
+      var bar2 = new ProgressBar.Circle(circleprog2, {
+        strokeWidth: 7,
+        easing: "easeInOut",
+        duration: 1400,
+        delay: 2600,
+        trailWidth: 7,
+        step: function (state, circle) {
+          var value = Math.round(circle.value() * 100);
+          circle.setText(value === 0 ? "" : 'B2');
+        },
+      });
+      bar2.animate(0.7);
   
-    bar.animate(0.7);
-  
-    var bar = new ProgressBar.Circle(circleprog3, {
-      strokeWidth: 7,
-      easing: "easeInOut",
-      duration: 1400,
-      delay: 2700,
-      trailWidth: 7,
-      step: function (state, circle) {
-        var value = Math.round(circle.value() * 100);
-        if (value === 0) {
-          circle.setText("");
-        } else {
-          circle.setText('A2');
-        }
-      },
-    });
-  
-    bar.animate(0.3);
-
+      var bar3 = new ProgressBar.Circle(circleprog3, {
+        strokeWidth: 7,
+        easing: "easeInOut",
+        duration: 1400,
+        delay: 2700,
+        trailWidth: 7,
+        step: function (state, circle) {
+          var value = Math.round(circle.value() * 100);
+          circle.setText(value === 0 ? "" : 'A2');
+        },
+      });
+      bar3.animate(0.3);
+    }
   }
+
+  initProgressCircles();
+  
 
   // Función para asignar el envío de EmailJS al formulario
   function attachEmailHandler() {
@@ -464,6 +452,8 @@ $(function () {
     });
 
     attachEmailHandler();
+
+    initProgressCircles();
 
 
     // Masonry Grid
